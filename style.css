@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 500px) {
+
+    body {
+        background-image: url(images/bg-main.png);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__logo {
+    margin-bottom: 80px;
+}
+
+.logo {
+    padding: 28px 16px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+
+    .header__logo {
+        margin-bottom: 130px;
+    }
+    
+    .logo {
+        padding: 38px 64px;
+    }
+}
+
+.img {
+    width: 90px;
+    height: 24px;
+    animation-name: img;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+@keyframes img {
+    0% {
+        filter: brightness(200%);
+    }
+    50% {
+        filter: hue-rotate(90deg);
+    }
+    100% {
+        filter: none;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+.main__title {
+    margin-bottom: 26px;
+}
+
+.title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 33px;
+    text-align: center;
+    padding: 0px 36px;
+    color: #FFFFFF;
+    opacity: 0;
+    animation-name: fade-in;
+    animation-delay: 0.75s;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    .main {
+        align-items: flex-start;
+        padding: 0px 64px;
+    }
+    
+    .main__title {
+        max-width: 605px;
+        margin-bottom: 29px;
+    }
+    
+    .title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 150%;
+        text-align: start;
+        padding: 0px;
+    }
+}
+
+.main__subtitle {
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 21px;
+    text-align: center;
+    padding: 0px 40px;
+    color: rgba(210, 210, 210, 0.9);
+    opacity: 0;
+    animation-name: fade-in-sub;
+    animation-delay: 1.5s;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-in-sub {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    .main__subtitle {
+        margin-bottom: 51px;
+    }
+    
+    .subtitle {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 120%;
+        text-align: start;
+        padding: 0px;
+    }
+}
+
+.main__form {
+    width: 100%;
+    max-width: 428px;
+    height: 56px;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    animation-name: fade-in-form;
+    animation-delay: 2.25s;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-in-form {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.form__input {
+    width: 100%;
+    height: 56px;
+    border-radius: 70px;
+    position: absolute;
+    z-index: 1;
+}
+
+.input {
+    background: transparent;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    padding-left: 24px;
+    padding-right: 140px;
+}
+
+.input:hover, .input:focus, .input:active {
+    outline: 1px solid #757575;
+    color:#FFFFFF;;
+}
+
+.form__button {
+    min-width: 114px;
+    height: 48px;
+}
+
+.button {
+    background: #FFFFFF;
+    border-radius: 64px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 171%;
+    color: #0F101E;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    right: 4px;
+    opacity: 0;
+    animation-name: fade-in-but;
+    animation-delay: 3s;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+@keyframes fade-in-but {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    .button {
+        font-size: 1rem;
+    }
+}
+
+.button:hover {
+    color: #5300C9;
+}
+
+.button:focus {
+    outline: 2px solid #B384F5;
+    color: #0F101E
+}
